@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #ffffff93, #ffffff93), url(./4659.jpg);
+  background-size: contain;
+  position:relative;
+}
+.nav{
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav h1{
   color: white;
+  font-size: 48px;
+  font-family: 'Chakra Petch', sans-serif;
+
+}
+.mainBody{
+  position: relative;
+  height: 70%;
+  margin: 50px 50px;
+  z-index: 10000000;
 }
 
-.App-link {
-  color: #61dafb;
+.blur{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* background-color: rgba(255, 255, 255, 0.267); */
+  /* filter: blur(100px);   */
+  backdrop-filter: blur(2px);
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  margin: 30px;
+  padding:30px;
 }
+
+.create button{
+  border: none;
+  background-color: transparent;
+}
+.create{
+  display: flex;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.Dhov{
+  display: none;
+  transition: 2s;
+  border: 1px solid black;
+  padding: 5px 20px;
+  position: absolute;
+  bottom: -40px;
+  right:-20px;
+  border-radius: 5px;
+
+}
+
+.create:hover .Dhov{
+  display: block;
+  transition: 10s;
+}
+
+.field{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.721);
+  z-index: 10000000;
+
+}
+
+.inputs{
+  border: 1px solid black;
+  padding: 50px 50px;
+  display: inline-block;
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 10000000; */
+  background-color: white;
+}
+
+.addform{
+  display: flex;
+  margin: 20px 0px;
+}
+
+.inputs p{
+  font-size: 48px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.inputs input[type = "text"]{
+  padding: 10px 10px;
+  width: 100%;
+  
+}
+
+
+
